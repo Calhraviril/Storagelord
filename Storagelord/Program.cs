@@ -35,3 +35,22 @@ static int DeleteTuote(int ID)
         }
     }
 }
+static void EtsiTuotteet()
+{
+    using (Varastohallinta varastohallinta = new())
+    {
+        Console.WriteLine("Käyttäjien tiedot");
+        IQueryable<Tuote>? tuotteet = varastohallinta.tuotteet;
+
+        if (tuotteet == null)
+        {
+            Console.WriteLine("Ei käyttäjiä rekisteröitynä");
+            return;
+        }
+
+        foreach (Tuote tuote in tuotteet)
+        {
+            Console.WriteLine("Varastossa on " + tuote.TUOTENIMI + " tuotetta " + tuote.VARASTOSALDO + " kpl.");
+        }
+    }
+}
