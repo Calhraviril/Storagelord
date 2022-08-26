@@ -6,3 +6,4 @@ CREATE TABLE Tuotteet (
 );
 
 Tietokannan nimi on "Varastohallinta"
+Ja "Varastohallinta.cs" osiossa pitää kai sun erikseen vaihtaa salasanan niin että pääset sisään

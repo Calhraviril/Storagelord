@@ -15,7 +15,7 @@ namespace Storagelord
             string connection = "Data Source=.;" +
                 "Initial Catalog=Varastohallinta;" +
                 "User Id=sa;" +
-                "Password=Lasi1423#3;";
+                "Password=salasana;"; // Varmaan pitää sun muuttaa tätä 
             optionsBuilder.UseSqlServer(connection);
 
             //"Integrated Security=true;" + 
