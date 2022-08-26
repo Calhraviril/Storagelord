@@ -13,7 +13,7 @@ namespace Storagelord
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string connection = "Data Source=.;" +
-                "Initial Catalog=Pelitietokanta;" +
+                "Initial Catalog=Varastohallinta;" +
                 "User Id=sa;" +
                 "Password=Lasi1423#3;";
             optionsBuilder.UseSqlServer(connection);

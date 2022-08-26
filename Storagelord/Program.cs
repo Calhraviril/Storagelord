@@ -17,7 +17,8 @@ while (true)
             string[] separLine = masterLine.Split(' ');
             if (separLine.Length == 4)
             {
-                AddTuote(Convert.ToInt32(separLine[0]), separLine[1], (float)Convert.ToDouble(separLine[2]), Convert.ToInt32(separLine[3]));
+                Console.WriteLine(separLine[0] + separLine[1] + separLine[2] + separLine[3]);
+                AddTuote(Convert.ToInt32(separLine[0]), separLine[1], Convert.ToDouble(separLine[2]), Convert.ToInt32(separLine[3]));
             }
             else
             {
@@ -46,7 +47,7 @@ while (true)
         break;
     }
 }
-static bool AddTuote(int uusiID, string uusiNimi, float uusiHinta, int uusiSaldo)
+static bool AddTuote(int uusiID, string uusiNimi, double uusiHinta, int uusiSaldo)
 {
     using (Varastohallinta varastohallinta = new())
     {
