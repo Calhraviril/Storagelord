@@ -54,3 +54,21 @@ static void EtsiTuotteet()
         }
     }
 }
+static bool ChangeProductName(string newName, int ID)
+{
+    using (Varastohallinta varastohallinta = new Varastohallinta())
+    {
+        Tuote tuoteToUpdate = varastohallinta.tuotteet.Find(ID);
+        if (tuoteToUpdate == null)
+        {
+            Console.WriteLine("Change Failed");
+            return false;
+        }
+        else
+        {
+            tuoteToUpdate.TUOTENIMI = newName;
+            int affected = varastohallinta.SaveChanges();
+            return (affected == 1);
+        }
+    }
+}
