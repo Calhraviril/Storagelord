@@ -1,6 +1,45 @@
 ﻿using Storagelord;
 
 Console.WriteLine($"- - STORAGELORD - -\n 1 - Lisää uusi tuote\n 2 - Poista tuote\n 3 - Tulosta eri tuotteiden määrät\n 4 - Muokkaa tuotenimeä\n 0 - Lopeta sovellus");
+while (true)
+{
+    int command = Convert.ToInt32(Console.ReadLine());
+    switch (command)
+    {
+        case 0:
+            Console.WriteLine("Bye bye =)");
+            break;
+        case 1:
+            Console.WriteLine("Kirjoita:ID Nimi Hinta Saldo");
+            string masterLine = Console.ReadLine();
+            string[] separLine = masterLine.Split(' ');
+            if (separLine.Length == 4)
+            {
+                AddTuote(Convert.ToInt32(separLine[0]), separLine[1], (float)Convert.ToDouble(separLine[2]), Convert.ToInt32(separLine[3]));
+            }
+            else
+            {
+                Console.WriteLine("Et kirjoittanut oikean määrän tietoa");
+            }
+            break;
+        case 2:
+            Console.WriteLine("Kirjoita poistettavan ID");
+            int delID = Convert.ToInt32(Console.ReadLine());
+            DeleteTuote(delID);
+            break;
+        case 3:
+            Console.WriteLine("Tulostetaan...");
+            EtsiTuotteet();
+            break;
+        case 4:
+            Console.WriteLine("Kirjoita:'Uusi nimi' 'Muutettavan ID'");
+            string masterLine2 = Console.ReadLine();
+            string[] separLine2 = masterLine2.Split(' ');
+            ChangeProductName(separLine2[0], Convert.ToInt32(separLine2[1]));
+            break;
+        default: Console.WriteLine("Komentoa ei ole olemassa"); break;
+    }
+}
 static bool AddTuote(int uusiID, string uusiNimi, float uusiHinta, int uusiSaldo)
 {
     using (Varastohallinta varastohallinta = new())
