@@ -1,6 +1,7 @@
 ﻿using Storagelord;
 
 Console.WriteLine($"- - STORAGELORD - -\n 1 - Lisää uusi tuote\n 2 - Poista tuote\n 3 - Tulosta eri tuotteiden määrät\n 4 - Muokkaa tuotenimeä\n 0 - Lopeta sovellus");
+bool deadProtocol = false;
 while (true)
 {
     int command = Convert.ToInt32(Console.ReadLine());
@@ -8,6 +9,7 @@ while (true)
     {
         case 0:
             Console.WriteLine("Bye bye =)");
+            deadProtocol = true;
             break;
         case 1:
             Console.WriteLine("Kirjoita:ID Nimi Hinta Saldo");
@@ -38,6 +40,10 @@ while (true)
             ChangeProductName(separLine2[0], Convert.ToInt32(separLine2[1]));
             break;
         default: Console.WriteLine("Komentoa ei ole olemassa"); break;
+    }
+    if (deadProtocol)
+    {
+        break;
     }
 }
 static bool AddTuote(int uusiID, string uusiNimi, float uusiHinta, int uusiSaldo)
