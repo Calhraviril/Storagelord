@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storagelord", "Storagelord\Storagelord.csproj", "{69967107-AFD2-442D-88E3-466BD73FACF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69967107-AFD2-442D-88E3-466BD73FACF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69967107-AFD2-442D-88E3-466BD73FACF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69967107-AFD2-442D-88E3-466BD73FACF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69967107-AFD2-442D-88E3-466BD73FACF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26D4E599-D0DA-43DF-8CF7-900323579D5B}
+	EndGlobalSection
+EndGlobal
